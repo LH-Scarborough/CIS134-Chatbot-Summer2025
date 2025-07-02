@@ -439,11 +439,8 @@ ${this.syllabus.instructor.office_hours.map(hours => `• ${hours}`).join('\n')}
                 // Course dates and schedule
                 if (this.matchesKeywords(q, ['course dates', 'when start', 'when end', 'schedule', 'due dates', 'due'])) {
                     return `📅 **Course Schedule:**
-• Course runs: ${this.syllabus.course.dates}
-• Mode: ${this.syllabus.course.mode}
-• Credit Hours: ${this.syllabus.course.credit_hours}
-
-The course is completely online, so you can access materials anytime!`;
+**Course start and end dates:** ${this.syllabus.course.dates}
+**Course Schedule** ${this.syllabus.schedule}`;
                 }
 
                 // Grading breakdown
