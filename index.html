@@ -421,9 +421,6 @@ Try asking me something or click the quick questions below!`);
 • Phone: ${this.syllabus.instructor.phone}
 • Office: ${this.syllabus.instructor.office}
 
-**Office Hours:**
-${this.syllabus.instructor.office_hours.map(hours => `• ${hours}`).join('\n')}
-
 You can also schedule virtual meetings via Microsoft Teams!`;
                 }
 
@@ -437,7 +434,7 @@ ${this.syllabus.instructor.office_hours.map(hours => `• ${hours}`).join('\n')}
                 }
 
                 // Course dates and schedule
-                if (this.matchesKeywords(q, ['course dates', 'when start', 'when end', 'schedule', 'due dates', 'due'])) {
+                if (this.matchesKeywords(q, ['course dates', 'when start', 'when end', 'schedule'])) {
                     return `📅 **Course start and end dates:** ${this.syllabus.course.dates}
 You will have assignments due each week in the course. Most all weekly assignments will be due the following Monday night, 11:59 pm. For finding out due dates for specific assignments view the Course Schedule located in the Start Here module of the course. You can also ask me: What assignments are due in week 2 of the course?`;
                 }
@@ -457,7 +454,7 @@ ${Object.entries(this.syllabus.grading.scale).map(([grade, range]) => `• ${gra
                 }
 
                 // Specific week questions
-                if (this.matchesKeywords(q, ['week']) && /week\s*(\d+)/.test(q)) {
+                if (this.matchesKeywords(q, ['week', 'due']) && /week\s*(\d+)/.test(q)) {
                     const weekMatch = q.match(/week\s*(\d+)/);
                     if (weekMatch) {
                         const weekNum = parseInt(weekMatch[1]);
