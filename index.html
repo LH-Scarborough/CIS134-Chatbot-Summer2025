@@ -23,16 +23,18 @@
 
     function respond(question) {
       const q = question.toLowerCase();
-      if (q.includes('instructor')) return `The instructor is ${syllabus.instructor.name}, email: ${syllabus.instructor.email}`;
+      if (q.includes('instructor') || q.includes('teacher') || q.includes('professor')){return `The instructor is ${syllabus.instructor.name}, email: ${syllabus.instructor.email}`;}
       if (q.includes('final exam')) return `The final exam is on ${syllabus.final_exam_date}`;
-      if (q.includes('office hours')) return `Office hours: ${syllabus.instructor.office_hours.join(', ')}`;
-      if (q.includes('grade') || q.includes('grading')) {
-        return `Grading: Review Questions (40%), Labs (40%), Exams (20%)`;
-      }
-      if (q.includes('late')) return syllabus.policies.late_work;
-      if (q.includes('plagiarism')) return syllabus.policies.plagiarism;
-      if (q.includes('contact')) return `Email: ${syllabus.instructor.email}, Phone: ${syllabus.instructor.phone}`;
-      return "I'm not sure about that. Please refer to the full syllabus or contact your instructor.";
+      if (q.includes('office hours') || q.includes('office') || q.includes('contact')) {return `Office hours: ${syllabus.instructor.office_hours.join(', ')}`; return `The instructor is ${syllabus.instructor.name}, email: ${syllabus.instructor.email}, Phone: ${syllabus.instructor.phone}`;}
+      if (q.includes('grade') || q.includes('grading')) { return `Grading: Review Questions (40%), Labs (40%), Exams (20%)`; return `Grades are located under the Grades link in the course navigation menu`; return `Contact your instructor for specific questions about a graded assignment`;}
+      if (q.includes('late') || q.includes('missed')) {return syllabus.policies.late_work;}
+      if (q.includes('plagiarism') || q.includes('cheating')) {return syllabus.policies.plagiarism;}
+      if (q.includes('due') || q.includes('date') || q.includes('schedule') || q.includes('calendar')) return `Refer to the Course Schedule located in the Start Here module for all assignment due dates. Assignments not submitted by the due date will receive a zero.`}
+      if (q.includes('attendance')) return `Students MUST complete the attendance verification quiz during the first 5 days of class. If not, the student will be dropped from the class.`;
+      if (q.includes('broken') || q.includes('error') || q.includes('problem') || q.includes('cant')) { return `For technical issues in the class, send an email to  Mr. Scarborough ${syllabus.instructor.email} and use the appropriate links in the Student Help & Support module located under Modules in the Canvas course`}
+      if (q.includes('requirements')) return `Review the full syllabus and be sure to read through the documents provided in the Start Here module of the Canvas course. For questions about specific assignment requirements, please contact Mr. Scarborough ${syllabus.instructor.email}, Phone: ${syllabus.instructor.phone}`;
+        
+      return "I'm not sure about that. Please refer to the syllabus, course overview, course schedule, or otherwise ask Mr. Scarborough.";
     }
 
     document.getElementById('input').addEventListener('keypress', function(e) {
