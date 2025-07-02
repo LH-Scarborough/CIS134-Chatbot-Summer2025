@@ -519,8 +519,41 @@ ${this.syllabus.materials.textbook}
 • ${this.syllabus.materials.access.in_person}`;
                 }
 
+                                // Proctoring
+                if (this.matchesKeywords(q, ['proctor', 'proctored', 'proctored exam', 'proctored quiz', 'honorlock', 'webcam'])) {
+                    return `📚 **Proctoring Policy**
+Enterprise State Community College utilizes remote proctoring to ensure online academic integrity. The College requires 
+all online students take a minimum of one proctored online exam in each course. However, the exact number may vary and should 
+be listed in the syllabus. Each distance education course will include a practice proctored quiz before the first proctored exam. 
+Students must complete this practice quiz in a timely manner to ensure they have the equipment and software needed to complete 
+proctored quizzes and exams for each course. Students in online courses must fulfill their responsibilities in arranging and taking each proctored exam. 
+Each instructor may have additional policies in place during the exam which will be listed in the syllabus or provided in the Start Here module. 
+If an online student does not take a proctored exam in each course, the student will fail the course.
+
+**HonorLock**
+For distance learning courses, ESCC utilizes an online proctoring solution (Honorlock) that allows students to take exams from home. 
+Before beginning an exam, the student must download and install a Chrome extension, provide a valid photo ID, and complete a scan of the testing environment.  
+A valid photo ID includes a driver's license, U.S. passport, college-issued student ID, or military ID. Audio, video, and the student’s computer screen 
+are recorded during the exam and recordings are reviewed by instructors. The Honorlock practice exam, mentioned above, will walk you through the process of installing the Chrome extension.
+
+**External Webcam**
+This course requires the use of an external webcam, one that connects to an external computer port (such as a USB) rather than a webcam built into the computer. 
+A camera built into your computer will NOT be sufficient for this course. The purpose of an external webcam is to provide a view across the student's work area. 
+This camera will be used to take your proctored exams and some quizzes. If you have not read the general Honorlock proctoring guidelines, review those carefully before continuing since those requirements will be enforced along with any information below.`
+                }
+
+                            // Attendance and Attendance Verification Quiz
+                if (this.matchesKeywords(q, ['attendance', 'attendance quiz', 'attendance verification'])) {
+                    return `📚 **Attendance Verification Quiz**
+The purpose of the mandatory attendance verification quiz is to document your attendance. Any student who does not complete this quiz will be 
+reported to the Registrar as a no-show and will be administratively removed from the course. Attendance verification is required before the disbursement of Pell Grant funds and student loans. 
+This quiz is also used to ensure that you have thoroughly reviewed and understood the course syllabus. The syllabus is a fundamental document that outlines the objectives, expectations, assessment methods, and policies for this course. 
+This quiz is designed to emphasize the importance of being fully informed about the course structure and requirements, ultimately contributing to your success in the course. Review the course syllabus and other items in the Start Here module before proceeding with the quiz.
+`
+                }
+
                 // Getting help
-                if (this.matchesKeywords(q, ['help', 'tutoring', 'assistance', 'support'])) {
+                if (this.matchesKeywords(q, ['help', 'tutoring', 'assistance', 'support', 'issue', 'problem'])) {
                     return `🆘 **Getting Help:**
 
 **Tutoring:** ${this.syllabus.support.academic_assistance.tutoring}
@@ -532,7 +565,10 @@ ${this.syllabus.materials.textbook}
 • Email responses: ${this.syllabus.instructor.response_times.email}
 • Grading turnaround: ${this.syllabus.instructor.response_times.grading}
 
-**Disability Services:** Contact ${this.syllabus.support.disability_services.contact} at ${this.syllabus.support.disability_services.email}`;
+**Disability Services:** Contact ${this.syllabus.support.disability_services.contact} at ${this.syllabus.support.disability_services.email}
+
+**Technial Issues**
+Contact Mr. Scarborough and use the Student Help & Support module in the course.`;
                 }
 
                 // Withdrawal information
