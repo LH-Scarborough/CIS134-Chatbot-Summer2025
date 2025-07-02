@@ -534,6 +534,11 @@ reported to the Registrar as a no-show and will be administratively removed from
 This quiz is also used to ensure that you have thoroughly reviewed and understood the course syllabus.`
                 }
 
+                              // Grades
+                if (this.matchesKeywords(q, ['grades', 'where are grades', 'find my grades'])) {
+                    return `To view your current grades in the class, click the Grades link in the course navigation menu.`
+                }
+
                 // Getting help
                 if (this.matchesKeywords(q, ['help', 'tutoring', 'assistance', 'support', 'issue', 'problem'])) {
                     return `🆘 **Getting Help:**
