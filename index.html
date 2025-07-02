@@ -438,9 +438,8 @@ ${this.syllabus.instructor.office_hours.map(hours => `• ${hours}`).join('\n')}
 
                 // Course dates and schedule
                 if (this.matchesKeywords(q, ['course dates', 'when start', 'when end', 'schedule', 'due dates', 'due'])) {
-                    return `📅 **Course Schedule:**
-**Course start and end dates:** ${this.syllabus.course.dates}
-**Course Schedule** ${this.syllabus.schedule}`;
+                    return `📅 **Course start and end dates:** ${this.syllabus.course.dates}
+You will have assignments due each week in the course. Most all weekly assignments will be due the following Monday night, 11:59 pm. For finding out due dates for specific assignments view the Course Schedule located in the Start Here module of the course. You can also ask me: What assignments are due in week 2 of the course?`;
                 }
 
                 // Grading breakdown
@@ -538,21 +537,17 @@ This quiz is also used to ensure that you have thoroughly reviewed and understoo
 
                 // Getting help
                 if (this.matchesKeywords(q, ['help', 'tutoring', 'assistance', 'support', 'issue', 'problem'])) {
-                    return `🆘 **Getting Help:**
-
-**Tutoring:** ${this.syllabus.support.academic_assistance.tutoring}
-
-**Instructor Support:**
+                    return `🆘 **Instructor Support:**
 • Email: ${this.syllabus.instructor.email}
 • Phone: ${this.syllabus.instructor.phone}
 • Office: ${this.syllabus.instructor.office}
-• Email responses: ${this.syllabus.instructor.response_times.email}
-• Grading turnaround: ${this.syllabus.instructor.response_times.grading}
-
-**Disability Services:** Contact ${this.syllabus.support.disability_services.contact} at ${this.syllabus.support.disability_services.email}
 
 **Technial Issues**
-Contact Mr. Scarborough and use the Student Help & Support module in the course.`;
+Contact Mr. Scarborough and use the Student Help & Support module in the course.
+
+ **Disability Services:** Contact ${this.syllabus.support.disability_services.contact} at ${this.syllabus.support.disability_services.email}
+
+**Tutoring:** ${this.syllabus.support.academic_assistance.tutoring}`
                 }
 
                 // Withdrawal information
