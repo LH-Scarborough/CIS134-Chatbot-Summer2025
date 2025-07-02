@@ -17,84 +17,96 @@
     let syllabus = {};
 
     async function loadSyllabus() {
-      const response = await fetch('https://raw.githubusercontent.com/LH-Scarborough/CIS134-Chatbot-Summer2025/main/course_syllabus.json');
-      syllabus = await response.json();
+      try {
+        const response = await fetch('https://raw.githubusercontent.com/LH-Scarborough/CIS134-Chatbot-Summer2025/main/course_syllabus.json');
+        if (!response.ok) {
+          throw new Error('Failed to load syllabus');
+        }
+        syllabus = await response.json();
+        console.log('Syllabus loaded successfully');
+      } catch (error) {
+        console.error('Error loading syllabus:', error);
+        document.getElementById('chatbox').innerHTML = '<p><strong>Error:</strong> Could not load syllabus data.</p>';
+      }
     }
 
-if (q.includes("instructor") || q.includes("who teaches")) {
-    return "Mr. Lee Scarborough is the instructor. You can reach him at lscarborough@escc.edu or (334) 348-4923.";
-  }
+    function respond(question) {
+      const q = question.toLowerCase();
 
-  if (q.includes("office hours")) {
-    return "Monday through Thursday: 8:00–9:00am, 10:15–11:00am, 11:30am–1:00pm, and 2:15–4:00pm.";
-  }
+      if (q.includes("instructor") || q.includes("who teaches")) {
+        return "Mr. Lee Scarborough is the instructor. You can reach him at lscarborough@escc.edu or (334) 348-4923.";
+      }
 
-  if (q.includes("course start") || q.includes("course end") || q.includes("course dates")) {
-    return "The course runs from May 27, 2025 to August 6, 2025.";
-  }
+      if (q.includes("office hours")) {
+        return "Monday through Thursday: 8:00–9:00am, 10:15–11:00am, 11:30am–1:00pm, and 2:15–4:00pm.";
+      }
 
-  if (q.includes("textbook") || q.includes("book")) {
-    return "The required material is CompTIA CertMaster Learn Tech+ (Digital Access Code). Contact the ESCC bookstore to get your access code.";
-  }
+      if (q.includes("course start") || q.includes("course end") || q.includes("course dates")) {
+        return "The course runs from May 27, 2025 to August 6, 2025.";
+      }
 
-  if (q.includes("grading breakdown") || q.includes("how is this course graded")) {
-    return "Review Questions: 40%, Labs: 40%, Exams: 20%. Five lowest lab and review question grades are dropped.";
-  }
+      if (q.includes("textbook") || q.includes("book")) {
+        return "The required material is CompTIA CertMaster Learn Tech+ (Digital Access Code). Contact the ESCC bookstore to get your access code.";
+      }
 
-  if (q.includes("grading scale") || q.includes("what is the grading scale")) {
-    return "A = 90–100%, B = 80–89%, C = 70–79%, D = 60–69%, F = 0–59%.";
-  }
+      if (q.includes("grading breakdown") || q.includes("how is this course graded")) {
+        return "Review Questions: 40%, Labs: 40%, Exams: 20%. Five lowest lab and review question grades are dropped.";
+      }
 
-  if (q.includes("final exam")) {
-    return "The final exam is scheduled for August 6, 2025.";
-  }
+      if (q.includes("grading scale") || q.includes("what is the grading scale")) {
+        return "A = 90–100%, B = 80–89%, C = 70–79%, D = 60–69%, F = 0–59%.";
+      }
 
-  if (q.includes("due date") || q.includes("when is") || q.includes("assignments due")) {
-    return "Assignment due dates are listed in Canvas Modules, the Calendar, Course Schedule, and the Syllabus.";
-  }
+      if (q.includes("final exam")) {
+        return "The final exam is scheduled for August 6, 2025.";
+      }
 
-  if (q.includes("late work") || q.includes("late assignment")) {
-    return "Late work receives a zero unless you notify the instructor within 24 hours before or after the deadline. Documentation may be required.";
-  }
+      if (q.includes("due date") || q.includes("when is") || q.includes("assignments due")) {
+        return "Assignment due dates are listed in Canvas Modules, the Calendar, Course Schedule, and the Syllabus.";
+      }
 
-  if (q.includes("plagiarism") || q.includes("academic honesty")) {
-    return "Plagiarism will result in a zero, an F in the course, and will be reported to the Dean. Inadvertent plagiarism may still result in a failing grade.";
-  }
+      if (q.includes("late work") || q.includes("late assignment")) {
+        return "Late work receives a zero unless you notify the instructor within 24 hours before or after the deadline. Documentation may be required.";
+      }
 
-  if (q.includes("tutor") || q.includes("academic help") || q.includes("assistance")) {
-    return "Free tutoring is available through Boll Weevil Central. Accept the Canvas invite during the first week of class.";
-  }
+      if (q.includes("plagiarism") || q.includes("academic honesty")) {
+        return "Plagiarism will result in a zero, an F in the course, and will be reported to the Dean. Inadvertent plagiarism may still result in a failing grade.";
+      }
 
-  if (q.includes("withdraw") || q.includes("last day to withdraw")) {
-    return "The last day to withdraw without academic penalty is July 24, 2025.";
-  }
+      if (q.includes("tutor") || q.includes("academic help") || q.includes("assistance")) {
+        return "Free tutoring is available through Boll Weevil Central. Accept the Canvas invite during the first week of class.";
+      }
 
-  if (q.includes("topics covered") || q.includes("what will i learn")) {
-    return "Topics include software, hardware, cybersecurity, networking, operating systems, databases, and coding fundamentals.";
-  }
+      if (q.includes("withdraw") || q.includes("last day to withdraw")) {
+        return "The last day to withdraw without academic penalty is July 24, 2025.";
+      }
 
-  if (q.includes("certification") || q.includes("comptia")) {
-    return "This course prepares students for the CompTIA IT Fundamentals (ITF+) certification.";
-  }
+      if (q.includes("topics covered") || q.includes("what will i learn")) {
+        return "Topics include software, hardware, cybersecurity, networking, operating systems, databases, and coding fundamentals.";
+      }
 
-  if (q.includes("virtual meeting") || q.includes("schedule meeting")) {
-    return "You can schedule a virtual meeting with Mr. Scarborough using Microsoft Teams.";
-  }
+      if (q.includes("certification") || q.includes("comptia")) {
+        return "This course prepares students for the CompTIA IT Fundamentals (ITF+) certification.";
+      }
 
-  if (q.includes("how long to grade") || q.includes("grading time")) {
-    return "Grades are returned within 7 days of the due date.";
-  }
+      if (q.includes("virtual meeting") || q.includes("schedule meeting")) {
+        return "You can schedule a virtual meeting with Mr. Scarborough using Microsoft Teams.";
+      }
 
-  if (q.includes("final grade") || q.includes("how do i see my grade")) {
-    return "Final grades are posted in the Student Information Center through MyESCC, not Canvas.";
-  }
+      if (q.includes("how long to grade") || q.includes("grading time")) {
+        return "Grades are returned within 7 days of the due date.";
+      }
 
-  if (q.includes("disability") || q.includes("accommodation")) {
-    return "For disability accommodations, contact Dava Leverette at dleverette@escc.edu.";
-  }
+      if (q.includes("final grade") || q.includes("how do i see my grade")) {
+        return "Final grades are posted in the Student Information Center through MyESCC, not Canvas.";
+      }
 
-  return "I'm not sure about that. Please refer to the syllabus or contact your instructor.";
-}
+      if (q.includes("disability") || q.includes("accommodation")) {
+        return "For disability accommodations, contact Dava Leverette at dleverette@escc.edu.";
+      }
+
+      return "I'm not sure about that. Please refer to the syllabus or contact your instructor.";
+    }
 
     document.getElementById('input').addEventListener('keypress', function(e) {
       if (e.key === 'Enter') {
