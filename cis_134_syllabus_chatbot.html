@@ -17,7 +17,7 @@
     let syllabus = {};
 
     async function loadSyllabus() {
-      const response = await fetch('https://raw.githubusercontent.com/LH-Scarborough/CIS134-Chatbot-Summer2025/refs/heads/main/course_syllabus.json');
+      const response = await fetch('https://raw.githubusercontent.com/LH-Scarborough/CIS134-Chatbot-Summer2025/main/course_syllabus.json');
       syllabus = await response.json();
     }
 
