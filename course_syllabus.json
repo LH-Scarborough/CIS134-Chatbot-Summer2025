@@ -5,7 +5,7 @@
     "delivery_mode": "Online",
     "dates": "May 27, 2025 – August 6, 2025"
   },
-  "instructor": {
+  "instructor", "teacher", "contact": {
     "name": "Mr. Lee Scarborough",
     "email": "lscarborough@escc.edu",
     "office": "Forrester 105",
@@ -17,11 +17,13 @@
     ],
     "phone": "(334) 348-4923"
   },
-  "grading": {
+  "grading", "grades": {
     "components": {
       "Review Questions": 40,
       "Labs": 40,
-      "Exams": 20
+      "Exams": 20,
+      "Find Grades": "You can view your grades by clicking on the Grades link in the navitation menu of our Canvas course."
+      
     },
     "scale": {
       "A": "90-100%",
@@ -34,6 +36,9 @@
   "policies": {
     "late_work": "Zero unless instructor is notified 24 hours before or after the deadline",
     "plagiarism": "Zero on assignment, F in course, reported to Dean"
+    "missed": "If you miss submitting an assignment, you will receive a zero for that assignment, unless otherwise approved by the instructor per prior communication between student and instructor.",
+    "late": "Late work will receive a zero, unless otherwise approved by the instructor per prior communication between student and instructor.",
+    "respond", "response": "I will respond within a few minutes or the hour if contacted during my office hours. Otherwise, I will respond during my next available office hours."
   },
   "final_exam_date": "August 6, 2025"
 }
