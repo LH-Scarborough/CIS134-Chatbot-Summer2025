@@ -210,12 +210,13 @@
       "topics": ["Final Exam Preparation"],
       "due": ["August 4"]
     },
-    {
-      "week": "Final",
-      "dates": "August 5 – 6",
-      "topics": ["Final Exam"],
-      "due": ["August 6"]
-    }
+{
+  "week": 11,
+  "type": "Final",
+  "dates": "August 5 – 6",
+  "topics": ["Final Exam"],
+  "due": ["August 6"]
+}
   ],
   "support": {
     "disability_services": {
