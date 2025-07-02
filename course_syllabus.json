@@ -51,20 +51,20 @@
   ],
   "grading": {
     "components": {
-     ["Review Questions": 40,
+     "Review Questions": 40,
       "Labs": 40,
-      "Exams": 20]
+      "Exams": 20
     },
     "scale": {
-      ["A": "90-100%",
+      "A": "90-100%",
       "B": "80-89%",
       "C": "70-79%",
       "D": "60-69%",
-      "F": "0-59%"]
+      "F": "0-59%"
     },
     "dropped_grades": {
-      ["labs": 5,
-      "review_questions": 5]
+      "labs": 5,
+      "review_questions": 5
     }
   },
   "policies": {
