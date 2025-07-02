@@ -1,0 +1,39 @@
+{
+  "course": {
+    "title": "CIS 134 - IT Fundamentals",
+    "credits": 3,
+    "delivery_mode": "Online",
+    "dates": "May 27, 2025 – August 6, 2025"
+  },
+  "instructor": {
+    "name": "Mr. Lee Scarborough",
+    "email": "lscarborough@escc.edu",
+    "office": "Forrester 105",
+    "office_hours": [
+      "Mon–Thu 8:00–9:00am",
+      "10:15–11:00am",
+      "11:30am–1:00pm",
+      "2:15–4:00pm"
+    ],
+    "phone": "(334) 348-4923"
+  },
+  "grading": {
+    "components": {
+      "Review Questions": 40,
+      "Labs": 40,
+      "Exams": 20
+    },
+    "scale": {
+      "A": "90-100%",
+      "B": "80-89%",
+      "C": "70-79%",
+      "D": "60-69%",
+      "F": "0-59%"
+    }
+  },
+  "policies": {
+    "late_work": "Zero unless instructor is notified 24 hours before or after the deadline",
+    "plagiarism": "Zero on assignment, F in course, reported to Dean"
+  },
+  "final_exam_date": "August 6, 2025"
+}
