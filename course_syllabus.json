@@ -82,15 +82,6 @@
     },
     "conduct": "Students are expected to communicate professionally and manage their time effectively."
   },
-  "proctoring": {
-      "Policy": "Enterprise State Community College utilizes remote proctoring to ensure online academic integrity. The College requires all online students take a minimum of one proctored online exam in each course. However, the exact number may vary and should be listed in the syllabus. Each distance education course will include a practice proctored quiz before the first proctored exam. Students must complete this practice quiz in a timely manner to ensure they have the equipment and software needed to complete proctored quizzes and exams for each course. Students in online courses must fulfill their responsibilities in arranging and taking each proctored exam. Each instructor may have additional policies in place during the exam which will be listed in the syllabus or provided in the Start Here module. If an online student does not take a proctored exam in each course, the student will fail the course.",
-      "Honorlock": "For distance learning courses, ESCC utilizes an online proctoring solution (Honorlock) that allows students to take exams from home. Before beginning an exam, the student must download and install a Chrome extension, provide a valid photo ID, and complete a scan of the testing environment.  A valid photo ID includes a driver's license, U.S. passport, college-issued student ID, or military ID. Audio, video, and the student’s computer screen are recorded during the exam and recordings are reviewed by instructors. The Honorlock practice exam, mentioned above, will walk you through the process of installing the Chrome extension.",
-      "Webcam": "Some online courses may require the use of an external webcam, one that connects to an external port rather than a webcam built into the computer. The purpose of an external webcam is to provide a view across the student's work area. If an external webcam is required, your instructor will list this requirement in the syllabus and will provide additional instructions about how to use the external webcam in the Start Here module of this course.",
-     
-  },
-  "attendance": {
-    "quiz": "The attendance verification quiz MUST be completed within 5 days from the course start date. The attendance quiz is located in the Start Here module.",
-  },
   "schedule": [
     {
       "week": 1,
