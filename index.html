@@ -263,9 +263,9 @@
             </div>
             <div class="quick-questions" id="quickQuestions" style="display: none;">
                 <span class="quick-question" data-question="Who is the instructor?">👨‍🏫 Instructor</span>
-                <span class="quick-question" data-question="What is the grading breakdown?">📊 Grading</span>
-                <span class="quick-question" data-question="When is the final exam?">📅 Final Exam</span>
                 <span class="quick-question" data-question="What are the office hours?">🕐 Office Hours</span>
+                <span class="quick-question" data-question="When are assignments due?">📅 Course Schedule</span>
+                <span class="quick-question" data-question="What books do I need?">📚 Course Materials</span>
                 <span class="quick-question" data-question="How do I get help?">❓ Get Help</span>
             </div>
         </div>
@@ -437,7 +437,7 @@ ${this.syllabus.instructor.office_hours.map(hours => `• ${hours}`).join('\n')}
                 }
 
                 // Course dates and schedule
-                if (this.matchesKeywords(q, ['course dates', 'when start', 'when end', 'schedule'])) {
+                if (this.matchesKeywords(q, ['course dates', 'when start', 'when end', 'schedule', 'due dates', 'due'])) {
                     return `📅 **Course Schedule:**
 • Course runs: ${this.syllabus.course.dates}
 • Mode: ${this.syllabus.course.mode}
@@ -479,7 +479,7 @@ ${week.due.map(due => `• ${due}`).join('\n')}`;
                 }
 
                 // Final exam
-                if (this.matchesKeywords(q, ['final exam', 'final test'])) {
+                if (this.matchesKeywords(q, ['final exam', 'final test', 'final'])) {
                     const finalWeek = this.syllabus.schedule.find(week => 
                         week.week === "Final" || week.week === 11 || 
                         week.topics.some(topic => topic.toLowerCase().includes('final'))
