@@ -305,7 +305,7 @@
                     
                 } catch (error) {
                     console.error('Failed to load syllabus:', error);
-                    this.showMessage('bot', '❌ Sorry, I couldn\'t load the course information. Please try refreshing the page or contact your instructor.');
+                    this.showMessage('bot', '❌ Sorry, I couldn\'t load the course information. Please try refreshing the page or try again later.');
                     document.getElementById('loadingMessage').style.display = 'none';
                 }
             }
@@ -526,6 +526,9 @@ ${this.syllabus.materials.textbook}
 **Tutoring:** ${this.syllabus.support.academic_assistance.tutoring}
 
 **Instructor Support:**
+• Email: ${this.syllabus.instructor.email}
+• Phone: ${this.syllabus.instructor.phone}
+• Office: ${this.syllabus.instructor.office}
 • Email responses: ${this.syllabus.instructor.response_times.email}
 • Grading turnaround: ${this.syllabus.instructor.response_times.grading}
 
