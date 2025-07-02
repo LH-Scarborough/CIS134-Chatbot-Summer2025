@@ -1,29 +1,59 @@
 {
   "course": {
     "title": "CIS 134 - IT Fundamentals",
-    "credits": 3,
-    "delivery_mode": "Online",
-    "dates": "May 27, 2025 – August 6, 2025"
+    "credit_hours": 3,
+    "term": "Summer 2025",
+    "mode": "Online",
+    "location": "Online",
+    "dates": "May 27, 2025 – August 6, 2025",
+    "description": "An introductory course that covers the fundamentals of software, hardware, security, and networking, as well as basic IT skills. Prepares students for the CompTIA IT Fundamentals certification.",
+    "prerequisites": "None"
   },
   "instructor": {
     "name": "Mr. Lee Scarborough",
-    "email": "lscarborough@escc.edu",
-    "office": "Forrester 105",
+    "office": "Wallace 219",
     "office_hours": [
       "Mon–Thu 8:00–9:00am",
       "10:15–11:00am",
       "11:30am–1:00pm",
       "2:15–4:00pm"
     ],
-    "phone": "(334) 348-4923"
+    "phone": "(334) 348-4923",
+    "email": "lscarborough@escc.edu",
+    "teams": "Schedule a virtual meeting via Microsoft Teams",
+    "response_times": {
+      "grading": "Within 7 days of due date",
+      "email": "Within 24 hours Mon–Thu; Friday–Sunday emails answered Monday"
+    }
   },
+  "division": {
+    "chair": "Jennifer Nelson",
+    "office": "Wallace 120",
+    "email": "jnelson@escc.edu",
+    "phone": "(334) 347-2623 ext. 2338"
+  },
+  "materials": {
+    "textbook": "CompTIA CertMaster Learn Tech+ - Digital Access Code (digital only)",
+    "access": {
+      "email": "bookstore@escc.edu",
+      "phone": "334-347-2623",
+      "in_person": "Visit bookstore"
+    }
+  },
+  "objectives": [
+    "Use security and web browsing best practices",
+    "Create networks to connect devices and the Internet",
+    "Use common software applications",
+    "Manage and update operating systems",
+    "Identify internal and external computer hardware",
+    "Explain database principles",
+    "Explain programming principles"
+  ],
   "grading": {
     "components": {
       "Review Questions": 40,
       "Labs": 40,
-      "Exams": 20,
-      "Find Grades": "You can view your grades by clicking on the Grades link in the navitation menu of our Canvas course."
-      
+      "Exams": 20
     },
     "scale": {
       "A": "90-100%",
@@ -31,14 +61,171 @@
       "C": "70-79%",
       "D": "60-69%",
       "F": "0-59%"
+    },
+    "dropped_grades": {
+      "labs": 5,
+      "review_questions": 5
     }
   },
   "policies": {
-    "late_work": "Zero unless instructor is notified 24 hours before or after the deadline",
-    "plagiarism": "Zero on assignment, F in course, reported to Dean"
-    "missed": "If you miss submitting an assignment, you will receive a zero for that assignment, unless otherwise approved by the instructor per prior communication between student and instructor.",
-    "late": "Late work will receive a zero, unless otherwise approved by the instructor per prior communication between student and instructor.",
-    "respond", "response": "I will respond within a few minutes or the hour if contacted during my office hours. Otherwise, I will respond during my next available office hours."
+    "assignment_submission": "Assignments must be submitted by the due date listed in Canvas.",
+    "late_work": "Work not submitted on time will receive a zero. Extenuating circumstances must be reported 24 hours before or after the deadline and may require documentation.",
+    "final_grades": "Final grades are posted to the Student Information Center (MyESCC). Grades are not shared via email or phone.",
+    "withdrawal": {
+      "note": "Withdrawal may affect financial aid eligibility.",
+      "last_day": "July 24, 2025"
+    },
+    "academic_honesty": {
+      "original_work": "All work must be your own and written exclusively for this course.",
+      "plagiarism": "Results in a zero, an F in the course, and report to Dean of Instruction."
+    },
+    "conduct": "Students are expected to communicate professionally and manage their time effectively."
   },
-  "final_exam_date": "August 6, 2025"
+  "schedule": [
+    {
+      "week": 1,
+      "dates": "May 27 – June 2",
+      "topics": ["Start Here Module"],
+      "due": ["Attendance Verification Quiz (May 30)", "Obtain Course Materials (June 2)"]
+    },
+    {
+      "week": 2,
+      "dates": "June 2 – 9",
+      "topics": [
+        "01.1 Use Technology Effectively",
+        "01.2 Explore the Computing Cycle",
+        "01.3 Recognize Computing Devices",
+        "01.4 Careers in Tech",
+        "01.5 Module Quiz",
+        "02.1 Understand Your Data",
+        "02.2 Data Privacy",
+        "02.3 Passwords and Encryption",
+        "02.4 Careers in Data and Privacy",
+        "02.5 Module Quiz"
+      ],
+      "due": ["June 9"]
+    },
+    {
+      "week": 3,
+      "dates": "June 9 – 16",
+      "topics": [
+        "03.1 Identify Internet Basics",
+        "03.2 Using a Web Browser",
+        "03.3 Internet Service Providers",
+        "03.4 Careers in Internet Technologies",
+        "03.5 Module Quiz"
+      ],
+      "due": ["June 16"]
+    },
+    {
+      "week": 4,
+      "dates": "June 16 – 23",
+      "topics": [
+        "04.1 Basic Security Concepts",
+        "04.2 Identify Common Security Threats",
+        "04.3 Security Tools and Software",
+        "04.4 Careers in Cybersecurity",
+        "04.5 Module Quiz",
+        "04.6 Checkpoint Review",
+        "05.1 Binary and Other Numbering Systems",
+        "05.2 Basic Networking Concepts",
+        "05.3 How Networks Work"
+      ],
+      "due": ["June 23"]
+    },
+    {
+      "week": 5,
+      "dates": "June 23 – 30",
+      "topics": [
+        "05.4 Small Wireless Network Specifications",
+        "05.5 Virtualization on the Network",
+        "05.6 Careers in Networking",
+        "05.7 Module Quiz",
+        "06.1 Common Applications",
+        "06.2 Productivity Software"
+      ],
+      "due": ["June 30"]
+    },
+    {
+      "week": 6,
+      "dates": "June 30 – July 7",
+      "topics": [
+        "06.3 Safely Managing Software",
+        "06.4 The CompTIA Troubleshooting Methodology",
+        "06.5 Careers in Apps and Software",
+        "06.6 Module Quiz",
+        "07.1 What is an Operating System?"
+      ],
+      "due": ["July 7"]
+    },
+    {
+      "week": 7,
+      "dates": "July 7 – 14",
+      "topics": [
+        "07.2 What Does an Operating System Do?",
+        "07.3 File Management",
+        "07.4 Data Backup",
+        "07.5 Careers in Operating Systems",
+        "07.6 Module Quiz",
+        "08.1 Units of Speed and Capacity",
+        "08.2 What's Inside a Computer?",
+        "08.3 Storage Types"
+      ],
+      "due": ["July 14"]
+    },
+    {
+      "week": 8,
+      "dates": "July 14 – 21",
+      "topics": [
+        "08.4 What Can I Connect to My Device?",
+        "08.5 Installing Connected Devices",
+        "08.6 Careers in Computer Hardware",
+        "08.7 Module Quiz",
+        "08.8 Checkpoint Review",
+        "09.1 Database Basics",
+        "09.2 Types of Databases",
+        "09.3 Relational Databases",
+        "09.4 Careers in Databases",
+        "09.5 Module Quiz"
+      ],
+      "due": ["July 21"]
+    },
+    {
+      "week": 9,
+      "dates": "July 21 – 28",
+      "topics": [
+        "10.1 What is Coding?",
+        "10.2 Planning a Coding Project",
+        "10.3 Variables and Data Types",
+        "10.4 Coding Principles",
+        "10.5 Careers in Coding",
+        "10.6 Module Quiz",
+        "11.1 Leading Technologies"
+      ],
+      "due": ["July 28"]
+    },
+    {
+      "week": 10,
+      "dates": "July 28 – August 4",
+      "topics": ["Final Exam Preparation"],
+      "due": ["August 4"]
+    },
+    {
+      "week": "Final",
+      "dates": "August 5 – 6",
+      "topics": ["Final Exam"],
+      "due": ["August 6"]
+    }
+  ],
+  "support": {
+    "disability_services": {
+      "contact": "Dava Leverette",
+      "email": "dleverette@escc.edu"
+    },
+    "academic_assistance": {
+      "tutoring": "Available through Boll Weevil Central; free for all students",
+      "support_services": "Student Support Services program may offer additional help"
+    }
+  },
+  "disclaimer": "An addendum will be provided if the course needs to transition to remote learning due to emergency situations."
 }
