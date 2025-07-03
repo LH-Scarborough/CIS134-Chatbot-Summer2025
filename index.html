@@ -440,7 +440,7 @@ View the Course Schedule located in the Start Here module of the course. You can
                 }
 
                 // Grading breakdown
-                if (this.matchesKeywords(q, ['grading breakdown', 'how graded', 'grade calculation', 'points'])) {
+                if (this.matchesKeywords(q, ['grading breakdown', 'how graded', 'grade calculation', 'points', 'grading'])) {
                     const components = this.syllabus.grading.components;
                     return `📊 **Grading Breakdown:**
 • Review Questions: ${components["Review Questions"]}%
@@ -451,6 +451,15 @@ View the Course Schedule located in the Start Here module of the course. You can
 ${Object.entries(this.syllabus.grading.scale).map(([grade, range]) => `• ${grade}: ${range}`).join('\n')}
 
 **Good News:** Your ${this.syllabus.grading.dropped_grades.labs} lowest lab grades and ${this.syllabus.grading.dropped_grades.review_questions} lowest review question grades will be dropped!`;
+                }
+
+                       // Grades
+                if (this.matchesKeywords(q, ['grades', 'grade'])) {
+                    const components = this.syllabus.grading.components;
+                    return `It's good that you are concerned about your grades in the course. To view your current grades, click the Grades link in the navigation menu. Assignments not submitted by the due date will receive a zero. 
+                    How can you earn a good grade in the class? This is accomplished by viewing and spending time with each lesson, completing ALL work on time, and by asking questions of Mr. Scarborough.
+                    **Good News:** Your ${this.syllabus.grading.dropped_grades.labs} lowest lab grades and ${this.syllabus.grading.dropped_grades.review_questions} lowest review question grades will be dropped!
+                    Any other questions specific to grades can be found by viewing the course syllabus or asking Mr. Scarborough`;
                 }
 
                 // Specific week questions
