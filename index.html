@@ -471,6 +471,11 @@ ${week.due.map(due => `• ${due}`).join('\n')}`;
                     }
                 }
 
+                //Assignments
+                if (this.matchesKeywords(q, ['assignment', 'assignments'])) {
+                    return `You will have various assignment types to complete in the course, including practice questions, labs, and exams. Assignments are located under the Modules section of the course. Assignments not submitted by the due date will be given a zero.`;
+                }
+
                 // Final exam
                 if (this.matchesKeywords(q, ['final exam', 'final test', 'final'])) {
                     const finalWeek = this.syllabus.schedule.find(week => 
@@ -485,7 +490,7 @@ The final exam covers all course material. Make sure to review all modules and c
                 }
 
                 // Late work policy
-                if (this.matchesKeywords(q, ['late work', 'late assignment', 'missed deadline'])) {
+                if (this.matchesKeywords(q, ['late work', 'late assignment', 'missed deadline', 'late', 'missed'])) {
                     return `⏰ **Late Work Policy:**
 ${this.syllabus.policies.late_work}
 
